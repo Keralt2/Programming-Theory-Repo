@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class CubeEnemy : Enemies
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Parameters()
     {
-        Parameters();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        heals = 120;
+        maxHeals = 120;
+        damage = 20;
+        text.text = heals.ToString() + "/" + maxHeals;
     }
 }

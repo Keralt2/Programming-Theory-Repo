@@ -13,8 +13,9 @@ public class Enemies : MonoBehaviour
     private void Start()
     {
         Parameters();
+
     }
-    public void Parameters()
+    public virtual void Parameters()
     {
         heals = 100;
         maxHeals = 100;
@@ -28,11 +29,9 @@ public class Enemies : MonoBehaviour
 
     public void ReceiveDamage(int damage)
     {
-        if (player.GetComponent<Player>().target == this)
-        {
-            heals -= damage;
-            slider.value = maxHeals - heals;
-            text.text = heals.ToString() + "/" + maxHeals;
-        }
+        heals -= damage;
+        slider.value = maxHeals - heals;
+        text.text = heals.ToString() + "/" + maxHeals;
+
     }
 }

@@ -53,4 +53,12 @@ public class Player : MonoBehaviour
         slider.value = maxHeals-heals;
         text.text = heals.ToString() + "/" + maxHeals;
     }
+
+    public void DealDamage()
+    {
+        if (target != null)
+        {
+            target.GetComponent<Enemies>().ReceiveDamage(damage);
+        }
+    }
 }
