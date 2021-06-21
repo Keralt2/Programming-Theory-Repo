@@ -1,24 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemies : MonoBehaviour
 {
     public GameObject player;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+    public Text text;
+    public Slider slider;
+    public int heals,maxHeals,damage;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        Parameters();
     }
-
+    public void Parameters()
+    {
+        heals = 100;
+        maxHeals = 100;
+        damage = 10;
+        text.text = heals.ToString() + "/" + maxHeals;
+    }
     public void DealDamage()
     {
-        int Damage = 10;
-        player.GetComponent<Player>().HPChange(Damage);
+        player.GetComponent<Player>().HPChange(damage);
+    }
+
+    public void ReceiveDamage(int damage)
+    {
+        heals -= damage;
+        slider.value = maxHeals - heals;
+        text.text = heals.ToString() + "/" + maxHeals;
     }
 }

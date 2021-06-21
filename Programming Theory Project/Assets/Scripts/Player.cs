@@ -15,10 +15,10 @@ public class Player : MonoBehaviour
         heals = 100;
         maxHeals = 100;
     }
-    public void HPChange(int Damage)
+    public void HPChange(int damage)
     {
-        heals -= Damage;
-        slider.value = 100-heals;
+        heals -= damage;
+        slider.value = maxHeals-heals;
         text.text = heals.ToString() + "/" + maxHeals;
     }
 
