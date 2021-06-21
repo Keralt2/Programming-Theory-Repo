@@ -8,13 +8,14 @@ public class Player : MonoBehaviour
 {
     public int heals;
     public Slider slider;
-    private Enemies enemies;
     public Text text;
     public GameObject target;
     public Camera GameCamera;
     public int damage;
+    private Enemies enemies;
     private int maxHeals;
     public Text selectedEnemy;
+    public Text PlayerParam;
     
 
 
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
         heals = 100;
         maxHeals = 100;
         damage = 10;
+        PlayerParametersUI();
     }
 
     private void Update()
@@ -52,6 +54,7 @@ public class Player : MonoBehaviour
         heals -= damage;
         slider.value = maxHeals-heals;
         text.text = heals.ToString() + "/" + maxHeals;
+        PlayerParametersUI();
     }
 
     public void DealDamage()
@@ -59,6 +62,13 @@ public class Player : MonoBehaviour
         if (target != null)
         {
             target.GetComponent<Enemies>().ReceiveDamage(damage);
+            selectedEnemy.text = target.name + "\n Damage " + target.GetComponent<Enemies>().damage
+                + "\n HP " + target.GetComponent<Enemies>().heals + "/" + target.GetComponent<Enemies>().maxHeals;
         }
+    }
+
+    private void PlayerParametersUI()
+    {
+        PlayerParam.text = MenuUI.Instance.Name + "\n Damage " + damage + "\n HP " + heals.ToString() + "/" + maxHeals;
     }
 }

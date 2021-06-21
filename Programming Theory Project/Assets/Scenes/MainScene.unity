@@ -1021,6 +1021,7 @@ MonoBehaviour:
   GameCamera: {fileID: 765624245}
   damage: 0
   selectedEnemy: {fileID: 1225139455}
+  PlayerParam: {fileID: 922063933}
 --- !u!1 &373103464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,7 +2564,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &922063934
 CanvasRenderer:
   m_ObjectHideFlags: 0

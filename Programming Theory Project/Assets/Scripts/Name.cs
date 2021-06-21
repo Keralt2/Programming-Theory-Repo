@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Name : MonoBehaviour
 {
@@ -12,4 +13,8 @@ public class Name : MonoBehaviour
         MenuUI.Instance.Name = inputField.text;
     }
 
+    public void SceneChange()
+    {
+        SceneManager.LoadScene(1);
+    }
 }
