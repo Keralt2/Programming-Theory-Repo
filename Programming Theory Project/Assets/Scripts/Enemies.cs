@@ -28,8 +28,11 @@ public class Enemies : MonoBehaviour
 
     public void ReceiveDamage(int damage)
     {
-        heals -= damage;
-        slider.value = maxHeals - heals;
-        text.text = heals.ToString() + "/" + maxHeals;
+        if (player.GetComponent<Player>().target == this)
+        {
+            heals -= damage;
+            slider.value = maxHeals - heals;
+            text.text = heals.ToString() + "/" + maxHeals;
+        }
     }
 }
