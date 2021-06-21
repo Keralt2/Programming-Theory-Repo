@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 {
     public int heals;
     public Slider slider;
+    private Enemies enemies;
     public Text text;
     public GameObject target;
     public Camera GameCamera;
@@ -35,7 +36,7 @@ public class Player : MonoBehaviour
     {
         var ray = GameCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.TryGetComponent<Enemies>(out enemies))
         {
             var unit = hit.collider.gameObject;
             /*var transform = hit.collider.GetComponent<Transform>();
