@@ -6,9 +6,10 @@ public class CubeEnemy : Enemies
 {
     public override void Parameters()
     {
-        heals = 120;
-        maxHeals = 120;
-        damage = 20;
+        heals = 100;
+        maxHeals = 100;
+        damageDeal = 2;
         text.text = heals.ToString() + "/" + maxHeals;
+        slider.maxValue = maxHeals;
     }
 }

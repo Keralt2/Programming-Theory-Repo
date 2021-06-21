@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class CylinderEnemy : Enemies
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public override void Parameters()
     {
-        Parameters();
+        heals = 25;
+        maxHeals = 25;
+        damageDeal = 10;
+        text.text = heals.ToString() + "/" + maxHeals;
+        slider.maxValue = maxHeals;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

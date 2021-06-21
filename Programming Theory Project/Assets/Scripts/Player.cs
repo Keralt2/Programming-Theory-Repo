@@ -16,14 +16,17 @@ public class Player : MonoBehaviour
     private int maxHeals;
     public Text selectedEnemy;
     public Text PlayerParam;
+    public Text gameOverText;
+    public Button AttackButton;
     
 
 
     void Start()
     {
-        heals = 100;
         maxHeals = 100;
-        damage = 10;
+        heals = maxHeals;
+        damage = 15;
+        slider.maxValue = maxHeals;
         PlayerParametersUI();
     }
 
@@ -44,7 +47,8 @@ public class Player : MonoBehaviour
             /*var transform = hit.collider.GetComponent<Transform>();
             transform.position = new Vector3(0f, 2f, 3f);*/
             target = unit;
-            selectedEnemy.text = target.name + "\n Damage " + target.GetComponent<Enemies>().damage 
+            AttackButton.interactable = true;
+            selectedEnemy.text = target.name + "\n Damage " + target.GetComponent<Enemies>().damageDeal 
                 + "\n HP " +target.GetComponent<Enemies>().heals +"/" + target.GetComponent<Enemies>().maxHeals;
         }
     }
@@ -55,6 +59,13 @@ public class Player : MonoBehaviour
         slider.value = maxHeals-heals;
         text.text = heals.ToString() + "/" + maxHeals;
         PlayerParametersUI();
+        if (heals<=0)
+        {
+            heals = 0;
+            gameOverText.gameObject.SetActive(true); 
+            gameObject.SetActive(false);
+                  
+        }
     }
 
     public void DealDamage()
@@ -62,8 +73,16 @@ public class Player : MonoBehaviour
         if (target != null)
         {
             target.GetComponent<Enemies>().ReceiveDamage(damage);
-            selectedEnemy.text = target.name + "\n Damage " + target.GetComponent<Enemies>().damage
+            if (target != null)
+            {
+                selectedEnemy.text = target.name + "\n Damage " + target.GetComponent<Enemies>().damageDeal
                 + "\n HP " + target.GetComponent<Enemies>().heals + "/" + target.GetComponent<Enemies>().maxHeals;
+            }
+            else
+            {
+                AttackButton.interactable = false;
+                selectedEnemy.text = "Select enemy";
+            }
         }
     }
 
