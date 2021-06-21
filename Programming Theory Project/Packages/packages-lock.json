@@ -1,5 +1,6 @@
 {
   "dependencies": {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
     "com.unity.2d.sprite": {
@@ -33,6 +34,8 @@
       "url": "https://packages.unity.com"
     },
 >>>>>>> title-screen
+=======
+>>>>>>> Stashed changes
     "com.unity.collab-proxy": {
       "version": "1.5.7",
       "depth": 0,
@@ -81,6 +84,7 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
     "com.unity.purchasing": {
@@ -97,6 +101,8 @@
       "url": "https://packages.unity.com"
     },
 >>>>>>> title-screen
+=======
+>>>>>>> Stashed changes
     "com.unity.test-framework": {
       "version": "1.1.24",
       "depth": 0,
@@ -138,6 +144,7 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
     "com.unity.xr.legacyinputhelpers": {
@@ -151,6 +158,8 @@
       "url": "https://packages.unity.com"
     },
 >>>>>>> title-screen
+=======
+>>>>>>> Stashed changes
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
