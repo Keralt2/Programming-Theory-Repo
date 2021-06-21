@@ -8,11 +8,29 @@ public class Enemies : MonoBehaviour
     public GameObject player;
     public Text text;
     public Slider slider;
-    public int heals,maxHeals,damageDeal;
+    public int heals, damageDeal;
+    static public int enemiesCount = 3;
+    public Text gameOverText;
+    private int maxHealsBack = 100;
+    public int maxHeals  // ENCAPSULATION
+    {
+        get { return maxHealsBack; }
+        set
+        {
+            if (value <0)
+            {
+                Debug.LogError("You can't set a negative HP");
+            }
+            else
+            {
+                maxHealsBack = value;
+            }
+        }
+    }
 
     private void Start()
     {
-        Parameters();
+        Parameters(); // ABSTRACTION
 
     }
     public virtual void Parameters()
@@ -38,7 +56,13 @@ public class Enemies : MonoBehaviour
             heals = 0;
             damageDeal = 0;
             player.GetComponent<Player>().target = null;
-            Debug.Log("target = null");
+            enemiesCount -= 1;
+            Debug.Log(enemiesCount);
+            if (enemiesCount <=0)
+            {
+                gameOverText.gameObject.SetActive(true);
+                gameOverText.text = "You Win!!!";
+            }
             gameObject.SetActive(false);
 
         }

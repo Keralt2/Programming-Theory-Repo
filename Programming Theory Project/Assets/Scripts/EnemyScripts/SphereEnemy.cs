@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SphereEnemy : Enemies
+public class SphereEnemy : Enemies // INHERITANCE
 {
     // Start is called before the first frame update
     void Start()
