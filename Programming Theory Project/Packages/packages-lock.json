@@ -1,8 +1,11 @@
 {
   "dependencies": {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> title-screen
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -33,9 +36,12 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
 >>>>>>> title-screen
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> title-screen
     "com.unity.collab-proxy": {
       "version": "1.5.7",
       "depth": 0,
@@ -84,9 +90,12 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> title-screen
     "com.unity.purchasing": {
       "version": "3.2.1",
       "depth": 0,
@@ -100,9 +109,12 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
 >>>>>>> title-screen
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> title-screen
     "com.unity.test-framework": {
       "version": "1.1.24",
       "depth": 0,
@@ -144,9 +156,12 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> title-screen
     "com.unity.xr.legacyinputhelpers": {
       "version": "2.1.7",
       "depth": 0,
@@ -157,9 +172,12 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
 >>>>>>> title-screen
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> title-screen
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

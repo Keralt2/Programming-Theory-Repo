@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> title-screen
 === Mon Jun 21 16:31:23 2021
 
 Packages were changed.
@@ -12,6 +15,7 @@ The following packages were added:
   com.unity.analytics@3.5.3
   com.unity.purchasing@3.2.1
   com.unity.xr.legacyinputhelpers@2.1.7
+<<<<<<< HEAD
 =======
 === Mon Jun 21 16:08:51 2021
 
@@ -59,3 +63,5 @@ The following packages were added:
   com.unity.timeline@1.4.8
   com.unity.ugui@1.0.0
 >>>>>>> Stashed changes
+=======
+>>>>>>> title-screen

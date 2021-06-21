@@ -35,3 +35,12 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+*.log
+*.log
+*.log
+*.log
+Programming Theory Project/Logs/Packages-Update.log
+Programming Theory Project/Logs/shadercompiler-AssetImportWorker0.log
+Programming Theory Project/Logs/shadercompiler-UnityShaderCompiler.exe0.log
+Programming Theory Project/UserSettings/EditorUserSettings.asset
+Programming Theory Project/ProjectSettings/ProjectSettings.asset
